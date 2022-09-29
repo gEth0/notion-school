@@ -1,1 +1,2 @@
 # notion-school
+- coming soon!

@@ -2,6 +2,8 @@ import requests
 import json
 import time
 import os
+import datetime
+from datetime import date
 import classeviva
 from classeviva.client import Client
 from classeviva.credentials import EnvCredentialsProvider
@@ -233,12 +235,19 @@ while True:
                 else:
                     subject = data[n].subject
                 deliveryDate = data[n].starts_at[0:10]
+                year = int(data[n].starts_at[0:4])
+                month = int(data[n].starts_at[5:7])
+                day = int(data[n].starts_at[8:10])
+                d1 = datetime.datetime(year, month, day)
+                today = date.today()
+                d2 = datetime.datetime.combine(today, datetime.time(0, 0))
                 idObj = str(data[n].id)
                 notes = data[n].notes
+                if not d2 >= d1:
+                    if idObj not in idList:
+                        addPage(databaseId, headers, deliveryDate,
+                                subject, idObj, notes)
 
-                if idObj not in idList:
-                    addPage(databaseId, headers, deliveryDate,
-                            subject, idObj, notes)
                 else:
                     continue
 

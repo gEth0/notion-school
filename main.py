@@ -216,7 +216,8 @@ setEnvVariables(email, password)
 while True:
     newReadDb = readDb(url, headers)
     with Client(EnvCredentialsProvider()) as client:
-        data = client.list_agenda()
+        data = client.list_agenda(
+            since=date.today(), until=date.today()+datetime.timedelta(days=100))
 
         idList = []
         if len(newReadDb['results']) == None:

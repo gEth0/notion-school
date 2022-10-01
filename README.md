@@ -61,8 +61,10 @@ When successfully running on your machine it'll prompt you to insert some creden
 - First you have to enter notion-db id(find online how to obtain it)
 - Then you have to enter your notion-secret-token( you have to login to [notion developers page](https://developers.notion.com/)
 - Lastly you have to enter your classeviva's credentials
+# Found an Issue?
+### Report it by create a [new issue](https://github.com/gEth0/notion-school/issues/new)
 
 # Refs :
- 🙌 Special Thanks to [@zmoog](https://github.com/zmoog)
- 
+ ##### 🙌 Special Thanks to [@zmoog](https://github.com/zmoog)
+###### New features and improvements coming soon!
 ## gEth0 💯 

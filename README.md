@@ -28,7 +28,7 @@ You've been so bothered by searching for tasks on different platforms; not to ha
 # Python
 First install all the dependencies needed typing : 
 ```python
-pip install -t requirements.txt
+pip install -r requirements.txt
 ```
 Then simply run main.py file with :
 ```python
